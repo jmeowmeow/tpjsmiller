@@ -1,0 +1,13 @@
+# README for Thousand Parsec name generator core
+# Jeff Miller, 26-July-2008
+
+To try out the name generator, run:
+
+     python names.py < starwars.txt
+
+or any of the other name data text files.
+
+The name data files have a simple format of one model name per line,
+with syllables separated by spaces, and #comment lines. 
+
+

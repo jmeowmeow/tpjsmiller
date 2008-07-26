@@ -1,0 +1,56 @@
+# README for Jeff Miller's Thousand Parsec Sandbox
+# Jeff Miller, 26-July-2008
+
+An interactive demo of the name generator is available on Google
+App Engine at:
+
+   http://tpnames.appspot.com
+
+------------------------------------------------------------------------
+
+Contents:
+
+./README -- this file
+
+------------------------------------------------------------------------
+
+./source -- source and sample data, exclusive of files specific to
+            demonstration applications.
+
+./source/tpnames          -- Thousand Parsec name generator 
+./source/tpnames/names.py -- name generator
+./source/tpnames/*.txt    -- name data files
+
+------------------------------------------------------------------------
+
+./appengine -- contains Google App Engine demo applications,
+               duplicates source and adds driver and UI files.
+
+./appengine/tpnames -- app to demonstrate the name generator
+
+  How to run it with the local dev_appserver.py or via command line:
+./appengine/tpnames/README
+
+  App config:
+./appengine/tpnames/app.yaml
+./appengine/tpnames/index.yaml
+
+  App UI:
+./appengine/tpnames/index.django
+
+  Core name generator.  This is the repurposeable bit:
+./appengine/tpnames/names.py
+
+  Variously flavored name sets as app input:
+./appengine/tpnames/ellie-anne-kate.txt
+./appengine/tpnames/gems.txt
+./appengine/tpnames/greek.txt
+./appengine/tpnames/middle-earth.txt
+./appengine/tpnames/starwars.txt
+./appengine/tpnames/persian.txt
+./appengine/tpnames/tpnames.py
+./appengine/tpnames/western.txt
+
+  static files for serving (e.g. images):
+./appengine/tpnames/static
+./appengine/tpnames/static/favicon.ico -- because it's Thousand Parsec

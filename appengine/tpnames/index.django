@@ -1,0 +1,51 @@
+<html>
+<head>
+<title>
+Names generated from {{selected}} using seed {{seed}} via Django and AppEngine
+</title>
+</head>
+<body>
+<h1>Seeded Random Name Generator</h1>
+<hr />
+<h2>Generator Parameters</h2>
+<form method="GET">
+new seed = <input type="text" name="seed" value="{{seed}}" />
+<input type="checkbox" {% if randomseed %}checked="y"{% endif %} name="randomseed" /> Random Seed<br />
+
+<select name="source">
+<option value="{{selected}}">{{selected}}</option> 
+{% for source in sources %}
+<option value="{{source}}">{{source}}</option> 
+
+{% endfor %}
+</select>
+</br>
+<input type="submit" value="Generate Names" />
+</form>
+
+<hr />
+<h2>Generated Names</h2>
+<p>
+Starting seed for this batch = {{seed}}<br />
+</p><p>
+{% for name in names %}
+{{ name }}<br />
+{% endfor %}
+</p>
+<p>
+Non-integer seeds are converted to int using <tt>hash(</tt><i>seed</i><tt>)</tt>.
+Seed increments by +1 per name within a batch.
+</p>
+<p>
+The generator combines tokens from the source file, choosing a random
+first token, then a random second token, until the token it picks is
+the last token in a word.  An uppercase token after the first will be
+preceded by a space.
+</p>
+<hr />
+<h2>Source File {{selected}}</h2>
+<pre>
+{{ sourcefile }}
+</pre>
+</body>
+</html>

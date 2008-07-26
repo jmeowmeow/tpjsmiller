@@ -1,0 +1,25 @@
+# README for tpnames AppEngine
+# Jeff Miller, 15-July-2008
+
+To try out the name generator by itself, run:
+
+     python names.py < starwars.txt
+
+To launch this Google AppEngine web application using the AppEngine
+development environment, install AppEngine (code.google.com/appengine ;
+requires Python 2.5), then run the development application server
+which will launch the application on Port 8080.
+
+This example command line assumes that the AppEngine scripts are on
+your path, and that the current working directory is the parent
+directory of the "tpnames" web application directory.
+
+      dev_appserver.py tpnames/
+
+If run without arguments, dev_appserver.py will print out a usage 
+message listing possible options like --port=HTTP_PORT 
+
+A version of this has been installed on the AppEngine vhost:
+
+   http://tpnames.appspot.com
+
