@@ -37,8 +37,9 @@ class MainPage(webapp.RequestHandler):
             self.response.out.write("<p><em>File not found:</em> "+ selected)
             self.response.out.write("</p><p><a href=\"" + self.request.path + "\">Reload form</a></p>")
             return
-        sources = [ 'persian.txt', 'greek.txt', 'middle-earth.txt', 
-                    'starwars.txt', 'ellie-anne-kate.txt', 'gems.txt',
+        sources = [ 'alphalyrae.txt', 'constellations.txt', 
+                    'persian.txt', 'greek.txt', 'middle-earth.txt', 
+                    'starwars.txt', 'ellie-anne-kate.txt','gems.txt',
                     'western.txt' ]
         unselected_sources = [ x for x in sources if x != selected ]
         template_values = {

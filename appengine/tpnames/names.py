@@ -29,7 +29,8 @@ def generate(input, seed):
 
 def makeSyllabary(input):
     """Breaks each line down into syllables, returning a list of lists of syllables.
-       Upper case syllables after the first are prepended with a space."""
+       Upper case syllables after the first are prepended with a space.
+       Underscore is replaced with a space (e.g. Ursae_Majoris)"""
     syllabary = list()
     startsWithUpper = re.compile('^[A-Z]')
     for line in input:
@@ -39,6 +40,7 @@ def makeSyllabary(input):
             syllables = list()
             for i in range(len(raw_syllables)):
                 syllable = raw_syllables[i]
+                syllable = syllable.replace('_', ' ')
                 if i > 0 and startsWithUpper.search(syllable):
                     syllables.append(' ' + syllable)
                 else:
